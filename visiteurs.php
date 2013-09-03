@@ -11,6 +11,23 @@ echo "</pre>";
 fclose($fichier);
 ?>
 
+
 <?php
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE) { echo "<script> alert(\"Tu as encore Internet Explorer. C'est decevant\"); </script>";}
+function Iexplorer()
+{
+
+    if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') == FALSE)
+        return false;
+
+    else
+    {
+        echo "<script> alert(\"Tu as encore Internet Explorer. C'est decevant\"); </script>";
+        return true;
+    }
+}
+
+Iexplorer();
+
 ?>
+
+<img src='http://lh5.ggpht.com/_LEDL5eT3epM/SvABDxOdcQI/AAAAAAAAAPc/YkihxiU5Pm8/img_4.jpg'>;
